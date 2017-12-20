@@ -384,5 +384,9 @@ typical word processor."
      (sql . nil)
      (sqlite . t))))
 
+(require 'org-crypt)
+(org-crypt-use-before-save-magic)
+(setq org-tags-exclude-from-inheritance (quote("crypt")))
+(setq org-crypt-key "lotreal@gmail.com")
 
 (provide 'init-org)
